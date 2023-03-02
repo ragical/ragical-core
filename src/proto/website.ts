@@ -34,7 +34,7 @@ const protoConfig = {
 };
 
 export const loadProto = async (
-  target: string = "website.proto",
+  target = "website.proto",
   retry?: boolean
 ) => {
   try {
@@ -55,7 +55,7 @@ export const loadProto = async (
 };
 
 export const getProto = async (
-  target: string = "website.proto"
+  target = "website.proto"
 ): Promise<Service & GRPC> => {
   const packageDef = await loadProto(target);
 

@@ -42,7 +42,7 @@ export const getAnalyticsPaging = async (
 
     return chain ? [pages, collection] : pages;
   } catch (e) {
-    console.error(e);
+    // console.error(e);
     return chain ? [[], collection] : [];
   }
 };

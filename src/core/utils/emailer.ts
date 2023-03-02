@@ -5,10 +5,10 @@ const { EMAIL_SERVICE_URL, EMAIL_CLIENT_ID, EMAIL_CLIENT_KEY } = config;
 
 let transporter: Partial<Transporter<any>> = {
   verify: () => {
-    return Promise.resolve(true as true);
+    return Promise.resolve(true as const);
   },
   sendMail: () => {
-    return Promise.resolve(true as true);
+    return Promise.resolve(true as const);
   },
 };
 

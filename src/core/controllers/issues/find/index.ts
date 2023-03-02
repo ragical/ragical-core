@@ -43,7 +43,7 @@ export const getIssues = async (
     domain,
     pageUrl,
   }: { userId: number; domain?: string; pageUrl?: string },
-  limit: number = 2000
+  limit = 2000
 ) => {
   const [collection] = connect("Issues");
   const searchProps = websiteSearchParams({

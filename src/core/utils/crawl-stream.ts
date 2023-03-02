@@ -12,7 +12,7 @@ import { getActiveCrawlKey } from "../../event/names";
 export const crawlHttpStream = (
   props: CrawlParams,
   res: FastifyContext["reply"],
-  removeTrailing: boolean = true // disable for high performance output
+  removeTrailing = true // disable for high performance output
 ): Promise<boolean> => {
   const {
     url,

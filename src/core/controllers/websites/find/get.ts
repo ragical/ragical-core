@@ -60,7 +60,7 @@ export const getWebsitesWithUsers = async (
  * [Promise]: Partial<Website[]>
  */
 export const getWebsitesPaginated = async (
-  limit: number = 10,
+  limit = 10,
   filter = {},
   page = 0, // page in collection
   offset?: number, // use offset to skip
@@ -70,8 +70,7 @@ export const getWebsitesPaginated = async (
 
   // websites stored only contain users
   const data =
-    collection &&
-    (await collection
+    await collection
       .find(filter)
       .sort({ order: 1 }) // todo: optional sorting
       .project(
@@ -85,7 +84,7 @@ export const getWebsitesPaginated = async (
       )
       .limit(limit)
       .skip(offset ?? limit * page)
-      .toArray());
+      .toArray();
 
   return [data ?? [], collection];
 };

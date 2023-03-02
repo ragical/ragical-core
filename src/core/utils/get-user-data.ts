@@ -124,7 +124,7 @@ export const allowedNext = (
  * @returns Promise<User> | void
  */
 export const getUserFromApiScan = async (
-  token: string = "",
+  token = "",
   _req: FastifyContext["request"],
   res: FastifyContext["reply"]
 ): Promise<User> => {

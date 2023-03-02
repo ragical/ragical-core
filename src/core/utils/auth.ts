@@ -3,7 +3,7 @@ import { PRIVATE_KEY, PUBLIC_KEY } from "../../config/config";
 
 const issuer = "AUTH/RESOURCE";
 const expiresIn = "365 days";
-let algorithm = "RS256";
+const algorithm = "RS256";
 
 const subject = "user@.com";
 const audience = "http://adahelpalerts.com"; // fix this with valid domain

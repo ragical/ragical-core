@@ -52,7 +52,7 @@ const getDataUntil = async (
   let websiteWarnings = prevIssuesInfo?.warningCount || 0;
   let websiteNotices = prevIssuesInfo?.noticeCount || 0;
   let websiteIssuesFixedByCdn = prevIssuesInfo?.issuesFixedByCdn || 0;
-  let websitePossibleIssuesFixedByCdn =
+  const websitePossibleIssuesFixedByCdn =
     prevIssuesInfo?.possibleIssuesFixedByCdn || 0;
 
   const accessScores: number[] = [];

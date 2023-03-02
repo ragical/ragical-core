@@ -13,7 +13,7 @@ import { getActiveCrawlKey } from "../../event/names";
 export const crawlHttpStreamSlim = (
   props: CrawlParams,
   res: FastifyContext["reply"],
-  removeTrailing: boolean = true
+  removeTrailing = true
 ): Promise<boolean> => {
   const { url, userId, subdomains, tld, robots, agent, proxy, sitemap } = props;
 

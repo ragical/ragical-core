@@ -17,11 +17,6 @@ export const extractLighthouse = ({ domain, pageUrl, userId, insight }) => {
   };
 };
 
-// type DataSource = {
-//   userId?: number;
-//   issues?: Issue;
-//   webPage?: Website
-// }
 // generic page format
 export const extractPageData = (dataSource: PageMindScanResponse) => {
   const { issues, webPage, userId } = dataSource ?? {

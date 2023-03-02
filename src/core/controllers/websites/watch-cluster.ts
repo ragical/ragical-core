@@ -4,7 +4,7 @@ import { websiteWatch } from "./watch-pages";
 
 // get users recursively
 const _getUsersUntil = async (
-  page: number = 0,
+  page = 0,
   userFilter: Record<string, unknown>
 ): Promise<void> => {
   const [pages] = await getWebsitesPaginated(20, userFilter, page);
